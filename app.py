@@ -1,0 +1,59 @@
+import os
+
+from flask import Flask, render_template, request
+
+import core.predictor as predictor
+import core.utils as utils
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello_world():
+    return render_template("index.html")
+
+
+@app.route("/test/xeye/predict/upload", methods=["GET"])
+def xeye_predict_upload_page():
+    return render_template("xeye_predict_upload_page.html")
+
+
+@app.route("/xeye/predict/file", methods=["POST"])
+def predict():
+    f = request.files['file']
+
+    # Save image
+    temp_image_file_save_path = utils.get_temp_file_path(app, f.filename)
+    f.save(temp_image_file_save_path)
+
+    # Predict
+    prediction = predictor.predict(temp_image_file_save_path)
+
+    # Remove
+    os.remove(temp_image_file_save_path)
+
+    return str(prediction)
+
+
+@app.route("/xeye/predict/url", methods=["POST"])
+def predict_url():
+    request_body = request.get_json()
+    url = request_body["url"]
+    if url is None:
+        return "Url is empty."
+
+    # Save image
+    temp_image_file_save_path = utils.get_temp_path(app)
+    utils.download(url, temp_image_file_save_path)
+
+    # Predict
+    prediction = predictor.predict(temp_image_file_save_path)
+
+    # Remove
+    os.remove(temp_image_file_save_path)
+
+    return str(prediction)
+
+
+if __name__ == '__main__':
+    app.run()
