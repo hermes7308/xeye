@@ -7,23 +7,23 @@ from PIL import Image, ImageOps
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Load the labels
+labels = []
+label_file_path = ROOT_DIR + "\model\labels.txt"
+with open(label_file_path, newline='') as csvfile:
+    label_reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    for row in label_reader:
+        labels.append(row[1] + "_" + row[2])
+print("Label file path: {}".format(label_file_path))
+print("Labels: {}".format(labels))
+
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
 # Load the model
 model_file_path = ROOT_DIR + "\model\keras_model.h5"
-print("Model file path: {}".format(model_file_path))
 model = tensorflow.keras.models.load_model(model_file_path)
-
-# Load the labels
-labels = []
-label_file_path = ROOT_DIR + "\model\labels.txt"
-print("Label file path: {}".format(label_file_path))
-with open(label_file_path, newline='') as csvfile:
-    label_reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    for row in label_reader:
-        labels.append(row[1] + "_" + row[2])
-print("Labels: {}".format(labels))
+print("Model file path: {}".format(model_file_path))
 
 
 def predict(image_file_path):

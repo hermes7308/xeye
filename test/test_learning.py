@@ -8,7 +8,8 @@ IMAGE_HOME = "C:/Users/herme/Desktop/hyunkeun.park/workspace/ai/xeye/images"
 # Original image home
 NORMAL_IMAGE_HOME = IMAGE_HOME + "/normal_image"
 # PORN_IMAGE_HOME = IMAGE_HOME + "/porn_image"
-PORN_IMAGE_HOME = IMAGE_HOME + "/redtube"
+# PORN_IMAGE_HOME = IMAGE_HOME + "/redtube"
+PORN_IMAGE_HOME = IMAGE_HOME + "/xxxvideo"
 
 # Fail image home
 FAIL_NORMAL_IMAGE_HOME = IMAGE_HOME + "/fail_normal_image"
