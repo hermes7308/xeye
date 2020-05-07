@@ -1,5 +1,5 @@
 # Xeye
-Xeye is made by python 3.7, Flask and Teachable machine.
+Xeye is made by python 3.7, Flask and Machine learning(Tensorflow).
 
 # Purpose
 Xeye work to filter porn image.
