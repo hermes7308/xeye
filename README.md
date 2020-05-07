@@ -58,6 +58,7 @@ Response nody:
 | 1.0.2   | 05/06/2020   |                         |                 | 12/34331               | 99.96%         | Others(redtube) 34,331 porn image                       |
 | 1.0.4   | 05/07/2020   |                         |                 | 34/2190                | 98.44%         | Others(xxxvideo) 2,190 porn image including text banner |
 | 1.0.5   | 05/07/2020   | 29/3013                 | 99.03%          | 40/2370                | 98.34%         | Others 2,370 porn image including text banner           |
+| 1.0.6   | 05/07/2020   | 3/94                    | 96.80%          | 44/550                 | 92.00%         | Others 550 porn image including text banner             |
 
 # License
 ```

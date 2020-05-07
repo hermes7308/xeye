@@ -71,9 +71,6 @@ def predict_url():
             "message": message
         }
 
-    # Remove
-    os.remove(temp_image_file_save_path)
-
     return {
         "status": "SUCCESS",
         "data": str(prediction)
