@@ -5,14 +5,50 @@ Xeye is made by python 3.7, Flask and Teachable machine.
 Xeye work to filter porno image.
 
 # Service
-## API
+## Page
 ### {http://127.0.0.1:5000}/
-* method: GET
+* Method: GET
 * Service page:
-    
+    * ![Normal image result][./data/xeye_filter_page_normal_result.png]
+    * ![Porn image result][./data/xeye_filter_page_porn_result.png]
+## API
 ### {http://127.0.0.1:5000}/xeye/predict/file
+* Method: POST
+* Request:
+```
+<form action="http://127.0.0.1:5000/xeye/predict/file" method="POST"
+      enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <input type="submit"/>
+</form>
+```
 ### {http://127.0.0.1:5000}/xeye/predict/url
+* Method: POST
+* Request: 
+```
+Request body:
+{
+	"url": "https://ei.rdtcdn.com/m=eGJF8f/media/videos/201902/28/14197691/original/13.jpg"
+}
+```
 
+### Response
+#### SUCCESS
+```
+Response nody:
+{
+    "status": "SUCCESS"
+    "data": "{0: {'label': 'Porn_Image', 'rate': ca}, 1: {'label': 'Normal_Image', 'rate': 0.0000001‬}}",
+}
+```
+#### FAIL
+```
+Response nody:
+{
+    "status": "FAIL"
+    "message": "Can't predict image file.",
+}
+```
 # Version 
 | Version | Release date | Normal fail/total count | Normal accuracy | Porno fail/total count | Porno accuracy | Remark                                              |
 |---------|--------------|-------------------------|-----------------|------------------------|----------------|-----------------------------------------------------|

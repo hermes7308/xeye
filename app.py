@@ -27,12 +27,23 @@ def predict():
     f.save(temp_image_file_save_path)
 
     # Predict
-    prediction = predictor.predict(temp_image_file_save_path)
+    try:
+        prediction = predictor.predict(temp_image_file_save_path)
+    except Exception as e:
+        message = "Can't predict, file."
+        print(message)
+        return {
+            "status": "FAIL",
+            "message": message
+        }
 
     # Remove
     os.remove(temp_image_file_save_path)
 
-    return str(prediction)
+    return {
+        "status": "SUCCESS",
+        "data": str(prediction)
+    }
 
 
 @app.route("/xeye/predict/url", methods=["POST"])
@@ -47,12 +58,23 @@ def predict_url():
     utils.download(url, temp_image_file_save_path)
 
     # Predict
-    prediction = predictor.predict(temp_image_file_save_path)
+    try:
+        prediction = predictor.predict(temp_image_file_save_path)
+    except Exception as e:
+        message = "Can't predict image file."
+        print(message)
+        return {
+            "status": "FAIL",
+            "message": message
+        }
 
     # Remove
     os.remove(temp_image_file_save_path)
 
-    return str(prediction)
+    return {
+        "status": "SUCCESS",
+        "data": str(prediction)
+    }
 
 
 if __name__ == '__main__':
