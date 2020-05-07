@@ -63,7 +63,8 @@ Response nody:
 | 1.0.5   | 05/07/2020   | 29/3013                 | 99.03%          | 40/2370                | 98.34%         | Others 2,370 porn image including text banner           |
 | 1.0.6   | 05/07/2020   | 3/94                    | 96.80%          | 44/550                 | 92.00%         | Others 550 porn image including text banner             |
 | 1.0.7   | 05/07/2020   |                         |                 |                        | 98.68%         | Random website image search                             |
-| 1.0.8   | 05/07/2020   |                         |                 |                        | 98.86%         | instagram image upload                             |
+| 1.0.8   | 05/07/2020   |                         |                 |                        | 98.86%         | instagram image upload                                  |
+| 1.0.9   | 05/07/2020   |                         |                 |                        | 98.43%         | facebook image upload                                   |
 
 # License
 ```
