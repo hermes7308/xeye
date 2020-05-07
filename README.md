@@ -9,13 +9,13 @@ Xeye work to filter porn image.
 
 # Service
 ## Page
-### {http://127.0.0.1:5001}/
+### http://127.0.0.1:5001/
 * Method: GET
 * Service page:
     * ![Normal image result](./data/xeye_filter_page_normal_result.png)
     * ![Porn image result](./data/xeye_filter_page_porn_result.png)
 ## API
-### {http://127.0.0.1:5001}/xeye/predict/file
+### http://127.0.0.1:5001/xeye/predict/file
 * Method: POST
 * Request:
 ```
@@ -25,7 +25,7 @@ Xeye work to filter porn image.
     <input type="submit"/>
 </form>
 ```
-### {http://127.0.0.1:5001}/xeye/predict/url
+### http://127.0.0.1:5001/xeye/predict/url
 * Method: POST
 * Request: 
 ```
