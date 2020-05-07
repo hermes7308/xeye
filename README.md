@@ -6,23 +6,23 @@ Xeye work to filter porn image.
 
 # Service
 ## Page
-### {http://127.0.0.1:5000}/
+### {http://127.0.0.1:5001}/
 * Method: GET
 * Service page:
     * ![Normal image result](./data/xeye_filter_page_normal_result.png)
     * ![Porn image result](./data/xeye_filter_page_porn_result.png)
 ## API
-### {http://127.0.0.1:5000}/xeye/predict/file
+### {http://127.0.0.1:5001}/xeye/predict/file
 * Method: POST
 * Request:
 ```
-<form action="http://127.0.0.1:5000/xeye/predict/file" method="POST"
+<form action="/xeye/predict/file" method="POST"
       enctype="multipart/form-data">
     <input type="file" name="file"/>
     <input type="submit"/>
 </form>
 ```
-### {http://127.0.0.1:5000}/xeye/predict/url
+### {http://127.0.0.1:5001}/xeye/predict/url
 * Method: POST
 * Request: 
 ```
