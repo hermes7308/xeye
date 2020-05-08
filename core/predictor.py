@@ -31,7 +31,7 @@ def predict(image_file_path):
     image = Image.open(image_file_path)
 
     # L: gray-scale, RGB: color
-    if image.mode is 'L':
+    if image.mode is not 'RGB':
         image = image.convert(mode="RGB")
 
     # resize the image to a 224x224 with the same strategy as in TM2:

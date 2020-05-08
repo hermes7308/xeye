@@ -18,6 +18,11 @@ def xeye_predict_upload_page():
     return render_template("xeye_predict_upload_page.html")
 
 
+@app.route("/test/xeye/predict/url", methods=["GET"])
+def xeye_predict_url_page():
+    return render_template("xeye_predict_url_page.html")
+
+
 @app.route("/xeye/predict/file", methods=["POST"])
 def predict():
     f = request.files['file']
@@ -48,6 +53,9 @@ def predict():
 @app.route("/xeye/predict/url", methods=["POST"])
 def predict_url():
     request_body = request.get_json()
+    if request_body is None:
+        return "Request body is empty."
+
     url = request_body["url"]
     if url is None:
         return "Url is empty."
