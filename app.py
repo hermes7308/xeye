@@ -33,13 +33,11 @@ def predict():
     except Exception as e:
         os.remove(temp_image_file_save_path)
         message = "Can't predict, file."
-        print(message)
+        print("# " + message)
         return {
             "status": "FAIL",
             "message": message
         }
-
-    # Remove
 
     return {
         "status": "SUCCESS",
@@ -65,7 +63,7 @@ def predict_url():
     except Exception as e:
         os.remove(temp_image_file_save_path)
         message = "Can't predict image file."
-        print(message)
+        print("# " + message)
         return {
             "status": "FAIL",
             "message": message
