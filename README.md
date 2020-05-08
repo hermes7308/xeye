@@ -65,6 +65,7 @@ Response nody:
 | 1.0.7   | 05/07/2020   |                         |                 |                        | 98.68%         | Random website image search                             |
 | 1.0.8   | 05/07/2020   |                         |                 |                        | 98.86%         | instagram image upload                                  |
 | 1.0.9   | 05/07/2020   |                         |                 |                        | 98.43%         | facebook image upload                                   |
+| 1.0.10  | 05/08/2020   |                         |                 |                        | 98.84%         | image upload                                            |
 
 # License
 ```
