@@ -1,6 +1,7 @@
 import os
 import shutil
 import uuid
+from os import path
 
 import requests
 from werkzeug.utils import secure_filename
@@ -20,3 +21,8 @@ def download(url, file_name):
         with open(file_name, 'wb') as file:
             request.raw.decode_content = True
             shutil.copyfileobj(request.raw, file)
+
+
+def remove(file_name):
+    if path.exists(file_name):
+        os.remove(file_name)

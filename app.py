@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask, render_template, request
 
 import core.predictor as predictor
@@ -25,18 +23,18 @@ def xeye_predict_url_page():
 
 @app.route("/xeye/predict/file", methods=["POST"])
 def predict():
-    f = request.files['file']
+    file = request.files['file']
 
     # Save image
-    temp_image_file_save_path = utils.get_temp_file_path(app, f.filename)
-    f.save(temp_image_file_save_path)
+    temp_image_file_save_path = utils.get_temp_file_path(app, file.filename)
 
     # Predict
     try:
+        file.save(temp_image_file_save_path)
         prediction = predictor.predict(temp_image_file_save_path)
-        os.remove(temp_image_file_save_path)
+        utils.remove(temp_image_file_save_path)
     except Exception as e:
-        os.remove(temp_image_file_save_path)
+        utils.remove(temp_image_file_save_path)
         message = "Can't predict, file."
         print("# " + message)
         return {
@@ -62,14 +60,14 @@ def predict_url():
 
     # Save image
     temp_image_file_save_path = utils.get_temp_path(app)
-    utils.download(url, temp_image_file_save_path)
 
     # Predict
     try:
+        utils.download(url, temp_image_file_save_path)
         prediction = predictor.predict(temp_image_file_save_path)
-        os.remove(temp_image_file_save_path)
+        utils.remove(temp_image_file_save_path)
     except Exception as e:
-        os.remove(temp_image_file_save_path)
+        utils.remove(temp_image_file_save_path)
         message = "Can't predict image file."
         print("# " + message)
         return {
