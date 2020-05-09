@@ -16,7 +16,7 @@ FAIL_NORMAL_IMAGE_HOME = IMAGE_HOME + "/fail_normal_image"
 FAIL_PORN_IMAGE_HOME = IMAGE_HOME + "/fail_porn_image"
 
 # Compare image host
-COMPARE_IMAGE_HOME = IMAGE_HOME + "/compare_web_image/17"
+COMPARE_IMAGE_HOME = IMAGE_HOME + "/compare_web_image/1"
 COMPARE_NORMAL_IMAGE_HOME = IMAGE_HOME + "/compare_normal_image"
 COMPARE_PORN_IMAGE_HOME = IMAGE_HOME + "/compare_porn_image"
 
