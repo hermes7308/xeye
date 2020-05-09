@@ -5,7 +5,10 @@ Xeye is made by python 3.7, Flask and Machine learning(Tensorflow).
 Xeye work to filter porn image.
 
 # Accuracy
-**Average: 97.29%**
+**Average: 97.95%**
+
+# Caution
+Accuracy may vary depending on the quality of the photo.
 
 # Service
 ## Page
@@ -67,6 +70,7 @@ Response nody:
 | 1.0.9   | 05/07/2020   |                         |                 |                        | 98.43%         | facebook image upload                                   |
 | 1.0.10  | 05/08/2020   |                         |                 |                        | 98.84%         | image upload                                            |
 | 1.0.11  | 05/08/2020   |                         |                 |                        | 97.29%         | image upload (Porn: 666, Normal: 856)                   |
+| 1.0.12  | 05/08/2020   |                         |                 |                        | 97.95%         | image upload (Porn: 715, Normal: 865)                   |
 
 # License
 ```
