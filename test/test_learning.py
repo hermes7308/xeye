@@ -16,7 +16,7 @@ FAIL_NORMAL_IMAGE_HOME = IMAGE_HOME + "/fail_normal_image"
 FAIL_PORN_IMAGE_HOME = IMAGE_HOME + "/fail_porn_image"
 
 # Compare image host
-COMPARE_IMAGE_HOME = IMAGE_HOME + "/compare_web_image/11"
+COMPARE_IMAGE_HOME = IMAGE_HOME + "/compare_web_image/12"
 COMPARE_NORMAL_IMAGE_HOME = IMAGE_HOME + "/compare_normal_image"
 COMPARE_PORN_IMAGE_HOME = IMAGE_HOME + "/compare_porn_image"
 
@@ -78,4 +78,6 @@ for index in range(len(compare_image_list)):
         compare_image_file_path = COMPARE_NORMAL_IMAGE_HOME + "/" + filename
         shutil.copy(image_file_path, compare_image_file_path)
 
-print("Total: " + str(len(compare_image_list)) + ", Predict: " + str(count))
+print("Total: " + str(len(compare_image_list))
+      + ", Predict: " + str(count)
+      + ", Error: " + str(len(compare_image_list) - count))
