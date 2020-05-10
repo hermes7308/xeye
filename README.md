@@ -74,6 +74,7 @@ Response nody:
 | 1.0.13  | 05/09/2020   |                         |                 |                        | 97.85%         | image upload (Porn: 720, Normal: 899)                   |
 | 1.0.14  | 05/09/2020   |                         |                 |                        | 97.36%         | image upload (Porn: 747, Normal: 925)                   |
 | 1.0.15  | 05/09/2020   |                         |                 |                        | 97.49%         | image upload (Porn: 807, Normal: 940)                   |
+| 1.0.16  | 05/09/2020   |                         |                 |                        | 97.49%         | image upload (Porn: 865, Normal: 940)                   |
 
 # License
 ```
