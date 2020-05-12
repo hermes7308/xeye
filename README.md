@@ -3,7 +3,7 @@
 Xeye is made by python 3.7, Flask and Machine learning(Tensorflow).
 
 # Demo video
-[![Demo video](static/image/youtube_thumnail.png)](https://youtu.be/k94PHAYdh1Q){target="_blank"}
+[![Demo video](static/image/youtube_thumnail.png)](static/video/xeye_demo_original.mkv)
 
 
 # Purpose
