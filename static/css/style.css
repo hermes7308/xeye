@@ -8,9 +8,13 @@ h1 {
     margin-bottom: 10px;
 }
 
+.logo {
+    max-width: 150px;
+}
+
 .file-upload {
     background-color: #eeeeee;
-    width: 600px;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -122,7 +126,7 @@ h1 {
 
 #label-container {
     margin: 25px auto auto;
-    width: 580px;
+    width: 90%;
 }
 
 /* Loader */

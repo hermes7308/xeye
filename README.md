@@ -1,4 +1,5 @@
-# Xeye
+![Normal image result](static/image/logo.png)
+
 Xeye is made by python 3.7, Flask and Machine learning(Tensorflow).
 
 # Purpose
@@ -15,8 +16,8 @@ Accuracy may vary depending on the quality of the photo.
 ### http://127.0.0.1:5001/
 * Method: GET
 * Service page:
-    * ![Normal image result](./data/xeye_filter_page_normal_result.png)
-    * ![Porn image result](./data/xeye_filter_page_porn_result.png)
+    * ![Normal image result](static/image/xeye_filter_page_normal_result.png)
+    * ![Porn image result](static/image/xeye_filter_page_porn_result.png)
 ## API
 ### http://127.0.0.1:5001/xeye/predict/file
 * Method: POST
