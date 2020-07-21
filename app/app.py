@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 
-import predictor as predictor
-import utils as utils
+import core.predictor as predictor
+import core.utils as utils
 
 app = Flask(__name__)
 
