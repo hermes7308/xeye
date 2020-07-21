@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 
-import core.predictor as predictor
-import core.utils as utils
+import predictor as predictor
+import utils as utils
 
 app = Flask(__name__)
 
@@ -82,4 +82,4 @@ def predict_url():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=5000)

@@ -1,4 +1,4 @@
-import core.predictor as predictor
+import predictor as predictor
 
 # Predict normal image
 normal_image_prediction = predictor.predict("C:/Users/herme/Desktop/hyunkeun.park/workspace/ai/xeye/images/grayscale_porn_image_200/6.jpg")

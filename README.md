@@ -1,9 +1,9 @@
-![Normal image result](static/image/logo.png)
+![Normal image result](app/static/image/logo.png)
 
 Xeye is made by python 3.7, Flask and Machine learning(Tensorflow).
 
 # Demo video
-[![Demo video](static/image/youtube.png)](https://www.youtube.com/watch?v=RJlhOmTtlx4)
+[![Demo video](app/static/image/youtube.png)](https://www.youtube.com/watch?v=RJlhOmTtlx4)
 
 
 # Purpose
@@ -20,8 +20,8 @@ Accuracy may vary depending on the quality of the photo.
 ### http://127.0.0.1:5001/
 * Method: GET
 * Service page:
-    * ![Normal image result](static/image/xeye_filter_page_normal_result.png)
-    * ![Porn image result](static/image/xeye_filter_page_porn_result.png)
+    * ![Normal image result](app/static/image/xeye_filter_page_normal_result.png)
+    * ![Porn image result](app/static/image/xeye_filter_page_porn_result.png)
 ## API
 ### http://127.0.0.1:5001/xeye/predict/file
 * Method: POST

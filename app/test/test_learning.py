@@ -1,7 +1,7 @@
 import os
 import shutil
 
-import core.predictor as predictor
+import predictor as predictor
 
 IMAGE_HOME = "C:/Users/herme/Desktop/hyunkeun.park/workspace/ai/xeye/images"
 
