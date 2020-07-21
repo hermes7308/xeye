@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request
-
 import core.predictor as predictor
 import core.utils as utils
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -9,43 +8,6 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return render_template("index.html")
-
-
-@app.route("/test/xeye/predict/upload", methods=["GET"])
-def xeye_predict_upload_page():
-    return render_template("xeye_predict_upload_page.html")
-
-
-@app.route("/test/xeye/predict/url", methods=["GET"])
-def xeye_predict_url_page():
-    return render_template("xeye_predict_url_page.html")
-
-
-@app.route("/xeye/predict/file", methods=["POST"])
-def predict():
-    file = request.files['file']
-
-    # Save image
-    temp_image_file_save_path = utils.get_temp_file_path(app, file.filename)
-
-    # Predict
-    try:
-        file.save(temp_image_file_save_path)
-        prediction = predictor.predict(temp_image_file_save_path)
-        utils.remove(temp_image_file_save_path)
-    except Exception as e:
-        utils.remove(temp_image_file_save_path)
-        message = "Can't predict, file."
-        print("# " + message)
-        return {
-            "status": "FAIL",
-            "message": message
-        }
-
-    return {
-        "status": "SUCCESS",
-        "data": str(prediction)
-    }
 
 
 @app.route("/xeye/predict/url", methods=["POST"])
@@ -69,6 +31,33 @@ def predict_url():
     except Exception as e:
         utils.remove(temp_image_file_save_path)
         message = "Can't predict image file."
+        print("# " + message)
+        return {
+            "status": "FAIL",
+            "message": message
+        }
+
+    return {
+        "status": "SUCCESS",
+        "data": str(prediction)
+    }
+
+
+@app.route("/xeye/predict/file", methods=["POST"])
+def predict():
+    file = request.files['file']
+
+    # Save image
+    temp_image_file_save_path = utils.get_temp_file_path(app, file.filename)
+
+    # Predict
+    try:
+        file.save(temp_image_file_save_path)
+        prediction = predictor.predict(temp_image_file_save_path)
+        utils.remove(temp_image_file_save_path)
+    except Exception as e:
+        utils.remove(temp_image_file_save_path)
+        message = "Can't predict, file."
         print("# " + message)
         return {
             "status": "FAIL",

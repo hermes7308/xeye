@@ -3,6 +3,10 @@ body {
     background-color: #ffffff;
 }
 
+body * {
+    font-family: "Rowdies", serif;
+}
+
 h1 {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -127,6 +131,44 @@ h1 {
 #label-container {
     margin: 25px auto auto;
     width: 90%;
+}
+
+.api-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+input.form-control[type="text"], input.form-control-file[type="file"] {
+    margin-right: 5px;
+    width: calc(100% - 97px);
+}
+
+input.btn[type="submit"] {
+    width: 82px;
+}
+
+hr {
+    width: 95%;
+    margin: 50px auto 0;
+    border: 1px solid #ced4da;
+}
+
+.btn {
+    color: #fff;
+    background-color: #2F73C3;
+    border-color: #2F73C3;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #1F64B2;
+    border-color: #2F73C3;
 }
 
 /* Loader */
