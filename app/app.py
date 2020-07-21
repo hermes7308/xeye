@@ -30,7 +30,7 @@ def predict_url():
         utils.remove(temp_image_file_save_path)
     except Exception as e:
         utils.remove(temp_image_file_save_path)
-        message = "Can't predict image file."
+        message = "Can't predict this url."
         print("# " + message)
         return {
             "status": "FAIL",

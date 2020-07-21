@@ -13,6 +13,20 @@
 </head>
 <body onload="init()">
 <div class="container">
+    <div class="banner header-banner">
+        {# Amazon Ad - Banner Links For Ez 728 x 90 #}
+        <div class="ad-banner w-banner-728">
+            <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ez&f=ifr&linkID=84a1029b91a8cc6a46291a805c48a3d2&t=youtubedown0f-20&tracking_id=youtubedown0f-20" width="728"
+                    height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </div>
+        {# Amazon Ad - Banner Links For Ez 728 x 90 #}
+        {# Amazon Ad - Banner Links For Ez 468 x 60 #}
+        <div class="ad-banner w-banner-468">
+            <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=2a711cf03276b4f1a0cc37c022403678&t=youtubedown0f-20&tracking_id=youtubedown0f-20" width="468"
+                    height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </div>
+        {# Amazon Ad - Banner Links For Ez 468 x 60 #}
+    </div>
     <h1>
         <img class="logo" src="/static/image/logo.png">
     </h1>
@@ -40,7 +54,7 @@
     <div class="api-container">
         <h1>API</h1>
         <h5>1. Request to predict image using url</h5>
-        <h6>POST, URL=/xeye/predict/url, REQUEST_BODY='{"url": "https://..."}'</h6>
+        <div>POST, URL=/xeye/predict/url, REQUEST_BODY='{"url": "https://..."}'</div>
         <form class="form-group" id="predict-image-url-form" method="POST">
             <input class="form-control" id="url" type="text" name="url"
                    placeholder="https://media.gadventures.com/media-server/cache/c6/2e/c62e5721fef11ef37d6c0815821c7b25.jpg"/>
@@ -49,12 +63,27 @@
         <pre id="predict-image-url-result"></pre>
 
         <h5>2. Request to predict image using upload Page</h5>
-        <h6>POST, URL=/xeye/predict/file, ENCTYPE=multipart/form-data, REQUEST_FILE_NAME=["file"]</h6>
+        <div>POST, URL=/xeye/predict/file, ENCTYPE=multipart/form-data, REQUEST_FILE_NAME=["file"]</div>
         <form class="form-group" id="predict-upload-image-form" method="POST" enctype="multipart/form-data">
             <input class="form-control-file" type="file" id="predict-upload-image" name="file" accept="image/*"/>
             <input class="btn" type="submit"/>
         </form>
         <pre id="predict-upload-image-result"></pre>
+    </div>
+
+    <div class="banner footer-banner">
+        {# Amazon Ad - Banner Links For Music & Entertainment 728 x 90 #}
+        <div class="ad-banner w-banner-728">
+            <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=musicandentertainmentrot&f=ifr&linkID=3876e68e9fa0204629b1b2df3fb947ce&t=youtubedown0f-20&tracking_id=youtubedown0f-20"
+                    width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </div>
+        {# Amazon Ad - Banner Links For Music & Entertainment 728 x 90 #}
+        {# Amazon Ad - Banner Links For Home Page Link (2016) 468 x 60 #}
+        <div class="ad-banner w-banner-468">
+            <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=26&l=ur1&category=amazonhomepage&f=ifr&linkID=542128447a008195fa62ab006dbcb490&t=youtubedown0f-20&tracking_id=youtubedown0f-20"
+                    width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        </div>
+        {# Amazon Ad - Banner Links For Home Page Link (2016) 468 x 60 #}
     </div>
 
     <div class="global-loader-mask">

@@ -171,6 +171,38 @@ hr {
     border-color: #2F73C3;
 }
 
+
+.banner {
+    width: 100%;
+    text-align: center;
+}
+
+.header-banner {
+    margin-bottom: auto;
+}
+
+.footer-banner {
+    margin-top: auto;
+}
+
+.ad-banner {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 468px) and (max-width: 728px) {
+    .w-banner-468 {
+        display: block;
+    }
+}
+
+@media (min-width: 728px) {
+    .w-banner-728 {
+        display: block;
+    }
+}
+
 /* Loader */
 .hide-scroll {
     overflow-y: hidden;
