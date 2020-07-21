@@ -9,7 +9,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load the labels
 labels = []
-label_file_path = ROOT_DIR + "\model\labels.txt"
+label_file_path = os.path.join(ROOT_DIR, "model", "labels.txt")
 with open(label_file_path, newline='') as csvfile:
     label_reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for row in label_reader:
@@ -21,7 +21,7 @@ print("# Labels: {}".format(labels))
 np.set_printoptions(suppress=True)
 
 # Load the model
-model_file_path = ROOT_DIR + "\model\keras_model.h5"
+model_file_path = os.path.join(ROOT_DIR, "model", "keras_model.h5")
 model = tensorflow.keras.models.load_model(model_file_path)
 print("# Model file path: {}".format(model_file_path))
 
