@@ -17,13 +17,13 @@ Accuracy may vary depending on the quality of the photo.
 
 # Service
 ## Page
-### http://127.0.0.1:5001/
+### http://xeye.pandous.com:5000/
 * Method: GET
 * Service page:
     * ![Normal image result](app/static/image/xeye_filter_page_normal_result.png)
     * ![Porn image result](app/static/image/xeye_filter_page_porn_result.png)
 ## API
-### http://127.0.0.1:5001/xeye/predict/file
+### http://xeye.pandous.com:5000/xeye/predict/file
 * Method: POST
 * Request:
 ```
@@ -33,7 +33,7 @@ Accuracy may vary depending on the quality of the photo.
     <input type="submit"/>
 </form>
 ```
-### http://127.0.0.1:5001/xeye/predict/url
+### http://xeye.pandous.com:5000/xeye/predict/url
 * Method: POST
 * Request: 
 ```
