@@ -46,7 +46,7 @@ Request body:
 ### Response
 #### SUCCESS
 ```
-Response nody:
+Response body:
 {
     "status": "SUCCESS"
     "data": "{0: {'label': 'Porn_Image', 'rate': ca}, 1: {'label': 'Normal_Image', 'rate': 0.0000001‬}}",
@@ -54,7 +54,7 @@ Response nody:
 ```
 #### FAIL
 ```
-Response nody:
+Response body:
 {
     "status": "FAIL"
     "message": "Can't predict image file.",
