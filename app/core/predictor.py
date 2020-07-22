@@ -58,11 +58,7 @@ def predict(image_file_path):
     # run the inference
     prediction = model.predict(data)[0]
 
-    result = {}
-    for i in range(len(prediction)):
-        result[i] = {
-            "label": labels[i],
-            "rate": prediction[i]
-        }
-
-    return result
+    return {
+        labels[0]: round(prediction[0], 3),  # PORN_IMAGE
+        labels[1]: round(prediction[1], 3),  # NORMAL_IMAGE
+    }
